@@ -1,8 +1,8 @@
-# CFA1600
+# Charter1900
 
-A study site for the CFA Level I exam: notes for all ten topics plus practice questions with explanations. Progress is saved in the browser, nothing is sent anywhere.
+A study site for the Level I CFA exam, named for 1900, the highest scaled score a candidate can receive. Short form and domain: C1900. Notes for all ten topics plus practice questions with explanations. Progress is saved in the browser, nothing is sent anywhere.
 
-Live at https://abdulazizhhalabi.github.io/cfa1600/
+Live at https://abdulazizhhalabi.github.io/c1900/
 
 ## Stack
 

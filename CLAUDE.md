@@ -1,7 +1,7 @@
-# CLAUDE.md — CFA1600 (Astro Study Site)
+# CLAUDE.md — Charter1900 (Astro Study Site)
 
 ## Project
-CFA1600 is a CFA Level I study site: static study materials per topic plus
+Charter1900 (short form C1900) is a CFA Level I study site: static study materials per topic plus
 interactive revision questions (multiple choice, A/B/C, with explanations).
 Stack: Astro + React islands + Tailwind CSS, TypeScript strict.
 Content lives in Astro content collections. This is a multi-file framework

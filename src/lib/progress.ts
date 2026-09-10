@@ -1,4 +1,19 @@
-const STORAGE_KEY = 'cfa1600:progress';
+const STORAGE_KEY = 'c1900:progress';
+const LEGACY_STORAGE_KEY = 'cfa1600:progress';
+
+/** Move progress saved under the site's old name to the current key, once. */
+function migrateLegacyProgress(): void {
+  try {
+    const legacy = localStorage.getItem(LEGACY_STORAGE_KEY);
+    if (legacy === null) return;
+    if (localStorage.getItem(STORAGE_KEY) === null) {
+      localStorage.setItem(STORAGE_KEY, legacy);
+    }
+    localStorage.removeItem(LEGACY_STORAGE_KEY);
+  } catch {
+    // localStorage unavailable — nothing to migrate
+  }
+}
 
 export interface TopicProgress {
   lastScore: number | null;
@@ -11,6 +26,7 @@ export type ProgressStore = Record<string, TopicProgress>;
 
 export function loadProgress(): ProgressStore {
   if (typeof window === 'undefined') return {};
+  migrateLegacyProgress();
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return {};

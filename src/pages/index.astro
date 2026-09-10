@@ -3,21 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import TopicGrid from '../components/TopicGrid';
 ---
 
-<Layout title="CFA1600" description="CFA Level I study materials and practice questions — all ten topics.">
+<Layout title="Charter1900" description="Charter1900: study materials and practice questions for all ten topics on the Level I CFA® exam.">
   <main style="min-height: 100vh; background: var(--color-surface-base);">
     <div style="max-width: 72rem; margin: 0 auto; padding: 5rem 1.5rem 6rem;">
 
       <!-- Hero -->
       <header style="margin-bottom: 4rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(201,151,74,0.12);">
         <div style="font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-brand-500); margin-bottom: 1rem;">
-          CFA Level I
+          CFA® Level I
         </div>
         <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--color-text-primary); margin: 0 0 1.25rem;">
-          CFA1600
+          Charter1900
         </h1>
-        <p style="font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.65; max-width: 52ch; margin: 0;">
-          Study materials and practice questions for all ten CFA Level I topics.
+        <p style="font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.65; max-width: 52ch; margin: 0 0 1rem;">
+          Study materials and practice questions for all ten topics on the Level I CFA exam.
           Exam weights shown are approximate official ranges.
+        </p>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; max-width: 52ch; margin: 0;">
+          Named for 1900, the highest scaled score a Level I candidate can receive.
         </p>
       </header>
 
@@ -29,8 +32,14 @@ import TopicGrid from '../components/TopicGrid';
         <TopicGrid client:load />
       </section>
 
-      <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(201,151,74,0.08); font-size: 0.8rem; color: var(--color-text-muted);">
-        Exam weights are approximate and based on official CFA Institute Level I topic area ranges.
+      <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(201,151,74,0.08); font-size: 0.8rem; line-height: 1.7; color: var(--color-text-muted);">
+        <p style="margin: 0 0 0.75rem;">
+          Exam weights are approximate and based on official CFA Institute Level I topic area ranges.
+        </p>
+        <p style="margin: 0;">
+          CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute.
+          Charter1900 is not affiliated with, sponsored by, or endorsed by CFA Institute.
+        </p>
       </footer>
 
     </div>
