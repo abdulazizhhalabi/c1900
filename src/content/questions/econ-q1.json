@@ -1,0 +1,12 @@
+{
+  "topic": "economics",
+  "prompt": "A central bank unexpectedly raises its policy rate by 50 basis points. All else equal, the most likely immediate effect on the domestic currency and bond prices is:",
+  "options": {
+    "A": "Currency appreciates; bond prices fall.",
+    "B": "Currency depreciates; bond prices rise.",
+    "C": "Currency appreciates; bond prices rise."
+  },
+  "correctAnswer": "A",
+  "explanation": "A rate hike makes domestic assets more attractive to foreign investors, increasing demand for the domestic currency — it appreciates. Higher interest rates mean higher discount rates for bond cash flows, so bond prices fall (price and yield move inversely). Options B and C each get one of the two directions wrong. This is a classic tested pairing: rate increases → currency strengthens AND bond prices fall.",
+  "difficulty": "easy"
+}

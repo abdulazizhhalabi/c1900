@@ -1,11 +1,38 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TopicGrid from '../components/TopicGrid';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="CFA1600" description="CFA Level I study materials and practice questions — all ten topics.">
+  <main style="min-height: 100vh; background: var(--color-surface-base);">
+    <div style="max-width: 72rem; margin: 0 auto; padding: 5rem 1.5rem 6rem;">
+
+      <!-- Hero -->
+      <header style="margin-bottom: 4rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(201,151,74,0.12);">
+        <div style="font-family: var(--font-sans); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-brand-500); margin-bottom: 1rem;">
+          CFA Level I
+        </div>
+        <h1 style="font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; color: var(--color-text-primary); margin: 0 0 1.25rem;">
+          CFA1600
+        </h1>
+        <p style="font-size: 1.1rem; color: var(--color-text-secondary); line-height: 1.65; max-width: 52ch; margin: 0;">
+          Study materials and practice questions for all ten CFA Level I topics.
+          Exam weights shown are approximate official ranges.
+        </p>
+      </header>
+
+      <!-- Topic grid (React island — reads localStorage for progress) -->
+      <section>
+        <h2 style="font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); margin: 0 0 1.75rem;">
+          Topics
+        </h2>
+        <TopicGrid client:load />
+      </section>
+
+      <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(201,151,74,0.08); font-size: 0.8rem; color: var(--color-text-muted);">
+        Exam weights are approximate and based on official CFA Institute Level I topic area ranges.
+      </footer>
+
+    </div>
+  </main>
 </Layout>

@@ -1,0 +1,12 @@
+{
+  "topic": "alternative-investments",
+  "prompt": "A hedge fund charges a 2% management fee on assets under management and a 20% performance fee on gains above a 5% hurdle rate. The fund has $100 million AUM and returns 12% in a year. The total fees earned by the fund are closest to:",
+  "options": {
+    "A": "$3.4 million",
+    "B": "$2.4 million",
+    "C": "$3.8 million"
+  },
+  "correctAnswer": "A",
+  "explanation": "Management fee = 2% × $100M = $2.0M. Gross gain = 12% × $100M = $12M. Hurdle = 5% × $100M = $5M. Gain above hurdle = $12M − $5M = $7M. Performance fee = 20% × $7M = $1.4M. Total fees = $2.0M + $1.4M = $3.4M. Option B ($2.4M) likely applies the performance fee to the full gain (20% × $12M = $2.4M) then ignores the management fee, or uses only the performance fee on a narrower base. Option C ($3.8M) overstates the performance fee.",
+  "difficulty": "medium"
+}

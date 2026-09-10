@@ -1,0 +1,12 @@
+{
+  "topic": "portfolio-management",
+  "prompt": "According to the Capital Asset Pricing Model (CAPM), an investor holds a stock with a beta of 1.4. The risk-free rate is 3% and the expected market return is 9%. The stock's required return is:",
+  "options": {
+    "A": "11.4%",
+    "B": "9.6%",
+    "C": "15.0%"
+  },
+  "correctAnswer": "A",
+  "explanation": "CAPM: E(Rᵢ) = Rf + βᵢ × (E(Rₘ) − Rf) = 3% + 1.4 × (9% − 3%) = 3% + 1.4 × 6% = 3% + 8.4% = 11.4%. Option B (9.6%) appears to use β × Rₘ without the risk premium properly: 1.4 × (9% − 3%) added to a wrong base. Option C (15.0%) multiplies β × Rₘ = 1.4 × 9% + 2.4% = incorrect. The market risk premium is (Rₘ − Rf) = 6%, and beta scales this premium. A beta > 1 means the stock is riskier than the market and requires a return above the market return.",
+  "difficulty": "easy"
+}

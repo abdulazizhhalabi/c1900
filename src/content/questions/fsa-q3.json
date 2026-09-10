@@ -1,0 +1,12 @@
+{
+  "topic": "financial-statement-analysis",
+  "prompt": "Using the DuPont framework, a company has net profit margin of 8%, asset turnover of 1.5, and an equity multiplier of 2.0. Its return on equity (ROE) is closest to:",
+  "options": {
+    "A": "12%",
+    "B": "24%",
+    "C": "16%"
+  },
+  "correctAnswer": "B",
+  "explanation": "The three-component DuPont formula is: ROE = Net profit margin × Asset turnover × Equity multiplier = 0.08 × 1.5 × 2.0 = 0.24 = 24%. Option A (12%) results from omitting the equity multiplier: 0.08 × 1.5 = 0.12. Option C (16%) results from multiplying margin × multiplier only: 0.08 × 2.0 = 0.16. All three components must be multiplied together. The equity multiplier (Assets/Equity) captures the effect of financial leverage on equity returns.",
+  "difficulty": "easy"
+}

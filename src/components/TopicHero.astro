@@ -1,0 +1,163 @@
+---
+import { withBase } from '../lib/paths';
+
+interface Props {
+  title: string;
+  examWeight: string;
+  topicLabel: string;
+}
+
+const { title, examWeight, topicLabel } = Astro.props;
+---
+
+<header class="topic-hero">
+  <div class="topic-hero__inner">
+    <a href={withBase('/')} class="back-link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      All Topics
+    </a>
+
+    <div class="topic-hero__meta">
+      <span class="topic-hero__subject">CFA Level I</span>
+      <span class="topic-hero__dot" aria-hidden="true">·</span>
+      <span class="topic-hero__subject">{topicLabel}</span>
+    </div>
+
+    <h1 class="topic-hero__title">{title}</h1>
+
+    <div class="topic-hero__badges">
+      <span class="exam-weight-badge">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M6 3.5V6.5L7.5 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        {examWeight} of exam
+      </span>
+      <span class="approx-badge">approximate</span>
+    </div>
+  </div>
+
+  <!-- Grain texture overlay -->
+  <div class="topic-hero__grain" aria-hidden="true"></div>
+  <!-- Radial glow -->
+  <div class="topic-hero__glow" aria-hidden="true"></div>
+</header>
+
+<style>
+  .topic-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-surface-elevated);
+    border-bottom: 1px solid rgba(201, 151, 74, 0.12);
+    padding: 2.5rem 0 4rem;
+  }
+
+  .topic-hero__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin-bottom: 2.5rem;
+    transition: color 0.15s ease;
+  }
+  .back-link:hover { color: var(--color-brand-400); }
+  .back-link:focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .topic-hero__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .topic-hero__subject {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-brand-500);
+  }
+
+  .topic-hero__dot {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+  }
+
+  .topic-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--color-text-primary);
+    margin: 0 0 1.75rem;
+    max-width: 18ch;
+  }
+
+  .topic-hero__badges {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+  }
+
+  .exam-weight-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(201, 151, 74, 0.12);
+    border: 1px solid rgba(201, 151, 74, 0.3);
+    color: var(--color-brand-400);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 100px;
+  }
+
+  .approx-badge {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+    font-style: italic;
+  }
+
+  /* Grain texture via SVG data URI */
+  .topic-hero__grain {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Subtle radial glow from top-right */
+  .topic-hero__glow {
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 151, 74, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+</style>

@@ -1,0 +1,12 @@
+{
+  "topic": "financial-statement-analysis",
+  "prompt": "A company switches its inventory costing method from FIFO to weighted-average cost during a period of rising prices. Compared to FIFO, this change will most likely result in:",
+  "options": {
+    "A": "Lower COGS, higher ending inventory, and higher net income.",
+    "B": "Higher COGS, lower ending inventory, and lower net income.",
+    "C": "Higher COGS, lower ending inventory, and higher net income."
+  },
+  "correctAnswer": "B",
+  "explanation": "When prices are rising, FIFO assigns older (lower) costs to COGS and newer (higher) costs to ending inventory. Weighted-average spreads costs evenly, resulting in a higher COGS (relative to FIFO) and a lower ending inventory balance. Higher COGS means lower gross profit and lower net income. Option A describes FIFO relative to weighted-average, not the other way around. Option C is internally inconsistent — higher COGS cannot produce higher net income, all else equal.",
+  "difficulty": "medium"
+}

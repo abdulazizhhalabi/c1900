@@ -1,0 +1,12 @@
+{
+  "topic": "corporate-issuers",
+  "prompt": "A company has a target capital structure of 40% debt and 60% equity. Its pre-tax cost of debt is 5%, cost of equity is 10%, and the corporate tax rate is 30%. The company's WACC is closest to:",
+  "options": {
+    "A": "7.40%",
+    "B": "8.00%",
+    "C": "7.00%"
+  },
+  "correctAnswer": "A",
+  "explanation": "WACC = (weight of debt × after-tax cost of debt) + (weight of equity × cost of equity). After-tax cost of debt = 5% × (1 − 0.30) = 3.5%. WACC = (0.40 × 3.5%) + (0.60 × 10%) = 1.4% + 6.0% = 7.4%. Option B uses the pre-tax cost of debt: (0.40 × 5%) + (0.60 × 10%) = 8.0%. Option C is incorrect. The tax shield on interest (reducing the cost of debt to its after-tax equivalent) is a fundamental feature of WACC — always multiply the cost of debt by (1 − t) before weighting.",
+  "difficulty": "easy"
+}

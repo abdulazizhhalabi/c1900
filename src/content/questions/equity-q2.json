@@ -1,0 +1,12 @@
+{
+  "topic": "equity-investments",
+  "prompt": "An analyst discovers that a company's stock consistently earns positive abnormal returns in the three days following its quarterly earnings announcements. This finding most directly challenges which form of market efficiency?",
+  "options": {
+    "A": "Weak form only.",
+    "B": "Semi-strong form.",
+    "C": "Strong form only."
+  },
+  "correctAnswer": "B",
+  "explanation": "Earnings announcements are public information. If prices do not fully and immediately reflect this public information — allowing investors to earn abnormal returns by acting on it — the market fails the semi-strong form test, which requires that prices reflect all publicly available information. Weak-form efficiency relates only to past price and volume data (technical analysis), not earnings news. Strong-form efficiency relates to non-public (insider) information. Since earnings announcements are public, this anomaly tests the semi-strong form specifically.",
+  "difficulty": "medium"
+}

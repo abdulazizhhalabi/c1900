@@ -1,0 +1,12 @@
+{
+  "topic": "quantitative-methods",
+  "prompt": "A portfolio's annual returns over the past four years were: +20%, −10%, +15%, −5%. The geometric mean annual return is closest to:",
+  "options": {
+    "A": "5.00%",
+    "B": "4.26%",
+    "C": "4.65%"
+  },
+  "correctAnswer": "B",
+  "explanation": "The geometric mean is calculated as: G = [(1.20)(0.90)(1.15)(0.95)]^(1/4) − 1. The product = 1.20 × 0.90 × 1.15 × 0.95 = 1.1817. The fourth root = 1.1817^0.25 = 1.0426. Therefore G ≈ 4.26%. The arithmetic mean would be (20 − 10 + 15 − 5)/4 = 5.00%, which overstates the compound growth rate. The geometric mean is always ≤ the arithmetic mean (they are equal only when all returns are identical) and is the correct measure of compound historical performance.",
+  "difficulty": "medium"
+}

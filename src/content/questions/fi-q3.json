@@ -1,0 +1,12 @@
+{
+  "topic": "fixed-income",
+  "prompt": "A bond is priced at $950, has a face value of $1,000, pays a $40 annual coupon, and matures in 3 years. The current yield of this bond is closest to:",
+  "options": {
+    "A": "4.21%",
+    "B": "4.00%",
+    "C": "4.74%"
+  },
+  "correctAnswer": "A",
+  "explanation": "Current yield = Annual coupon / Flat price = $40 / $950 = 0.04211 ≈ 4.21%. Option B (4.00%) divides the coupon by face value (40/1000), which is the coupon rate, not the current yield. Option C (4.74%) is closer to the yield to maturity, which accounts for the capital gain from $950 to $1,000 at maturity as well. Current yield is a simple ratio and ignores both time value and the pull-to-par effect; it overstates the YTM for discount bonds and understates it for premium bonds.",
+  "difficulty": "easy"
+}

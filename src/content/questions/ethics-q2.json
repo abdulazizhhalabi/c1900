@@ -1,0 +1,12 @@
+{
+  "topic": "ethical-professional-standards",
+  "prompt": "A portfolio manager is about to execute a large buy order for a client. Before placing the client's trade, she purchases the same security for her own account, anticipating that the client's order will push the price up. This conduct most likely violates:",
+  "options": {
+    "A": "Standard III(A) – Loyalty, Prudence, and Care only.",
+    "B": "Standard VI(B) – Priority of Transactions only.",
+    "C": "Both Standard III(A) – Loyalty, Prudence, and Care and Standard VI(B) – Priority of Transactions."
+  },
+  "correctAnswer": "C",
+  "explanation": "Front-running — trading for one's own account ahead of a client order — violates Standard VI(B), which requires that client and employer transactions take priority over the member's personal transactions. It also violates Standard III(A) because the manager is failing to act in the client's best interest, placing personal gain above client welfare. Both Standards are implicated simultaneously.",
+  "difficulty": "medium"
+}

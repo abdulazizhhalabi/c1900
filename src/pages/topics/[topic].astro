@@ -1,0 +1,144 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import TopicHero from '../../components/TopicHero.astro';
+import StudyContent from '../../components/StudyContent.astro';
+import QuizIsland from '../../components/QuizIsland';
+import { TOPIC_META, type TopicSlug } from '../../lib/topics';
+
+export async function getStaticPaths() {
+  const materials = await getCollection('materials');
+  return materials.map(entry => ({
+    params: { topic: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+
+const slug = entry.id as TopicSlug;
+const meta = TOPIC_META[slug];
+
+const allQuestions = await getCollection('questions');
+const topicQuestions = allQuestions
+  .filter(q => q.data.topic === slug)
+  .map(q => ({
+    id: q.id,
+    prompt: q.data.prompt,
+    options: q.data.options,
+    correctAnswer: q.data.correctAnswer,
+    explanation: q.data.explanation,
+    difficulty: q.data.difficulty,
+  }));
+---
+
+<Layout
+  title={entry.data.title}
+  description={`CFA Level I — ${entry.data.title}. Study materials and practice questions. Exam weight: ${entry.data.examWeight}.`}
+>
+  <div class="page-root">
+
+    <TopicHero
+      title={entry.data.title}
+      examWeight={entry.data.examWeight}
+      topicLabel={meta?.label ?? entry.data.title}
+    />
+
+    <main class="page-main">
+      <div class="page-inner">
+
+        <!-- Study Material -->
+        <section class="section" aria-label="Study material">
+          <div class="section__header">
+            <span class="section__label">Study Material</span>
+          </div>
+          <StudyContent headings={headings}>
+            <Content />
+          </StudyContent>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- Quiz -->
+        <section class="section" aria-label="Practice quiz">
+          <div class="section__header">
+            <span class="section__label">Practice Quiz</span>
+            <span class="section__count">{topicQuestions.length} question{topicQuestions.length !== 1 ? 's' : ''}</span>
+          </div>
+          <QuizIsland
+            client:load
+            questions={topicQuestions}
+            topic={meta?.label ?? entry.data.title}
+            topicSlug={slug}
+          />
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+</Layout>
+
+<style>
+  .page-root {
+    min-height: 100vh;
+    background: var(--color-surface-base);
+  }
+
+  .page-main {
+    padding: 3.5rem 0 6rem;
+  }
+
+  .page-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .section__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  .section__count {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-brand-600);
+    background: rgba(201, 151, 74, 0.08);
+    border: 1px solid rgba(201, 151, 74, 0.12);
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    letter-spacing: 0.04em;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(201, 151, 74, 0.15) 20%,
+      rgba(201, 151, 74, 0.15) 80%,
+      transparent
+    );
+    margin: 0;
+  }
+</style>

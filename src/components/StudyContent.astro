@@ -1,0 +1,102 @@
+---
+interface Props {
+  headings?: { depth: number; slug: string; text: string }[];
+}
+
+const { headings = [] } = Astro.props;
+const h2s = headings.filter(h => h.depth === 2);
+---
+
+<div class="study-layout">
+  {h2s.length > 1 && (
+    <aside class="study-toc">
+      <p class="study-toc__label">Contents</p>
+      <nav>
+        <ol class="study-toc__list">
+          {h2s.map(h => (
+            <li>
+              <a href={`#${h.slug}`} class="study-toc__link">{h.text}</a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </aside>
+  )}
+
+  <article class="prose-cfa study-body">
+    <slot />
+  </article>
+</div>
+
+<style>
+  .study-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media (min-width: 1024px) {
+    .study-layout {
+      grid-template-columns: 1fr 220px;
+    }
+    /* Put TOC to the right */
+    .study-body  { order: 0; }
+    .study-toc   { order: 1; }
+  }
+
+  /* ToC */
+  .study-toc {
+    position: sticky;
+    top: 2rem;
+    background: var(--color-surface-floating);
+    border: 1px solid rgba(201, 151, 74, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .study-toc__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin: 0 0 0.875rem;
+  }
+
+  .study-toc__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .study-toc__link {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.25rem;
+    line-height: 1.4;
+    transition: color 0.12s ease, background 0.12s ease;
+  }
+  .study-toc__link:hover {
+    color: var(--color-brand-400);
+    background: rgba(201, 151, 74, 0.06);
+  }
+  .study-toc__link:focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+
+  /* Mobile: hide TOC (it's supplemental) */
+  @media (max-width: 1023px) {
+    .study-toc {
+      display: none;
+    }
+  }
+</style>

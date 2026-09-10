@@ -1,0 +1,12 @@
+{
+  "topic": "corporate-issuers",
+  "prompt": "Under Modigliani-Miller with corporate taxes, a firm's optimal capital structure is best described as:",
+  "options": {
+    "A": "All-equity, to minimize financial distress risk.",
+    "B": "100% debt, to maximize the interest tax shield.",
+    "C": "A mix of debt and equity that balances the tax shield against the costs of financial distress."
+  },
+  "correctAnswer": "C",
+  "explanation": "The pure MM proposition with taxes suggests firms should use as much debt as possible to maximize the present value of the interest tax shield (Tax shield PV = t × D). However, this ignores the costs of financial distress — bankruptcy costs, agency conflicts, and reduced operational flexibility that rise with leverage. The trade-off theory reconciles these forces: an optimal capital structure exists where the marginal benefit of the tax shield equals the marginal cost of financial distress. Option A ignores the tax advantage of debt. Option B reflects the original MM-with-taxes result but is unrealistic without distress costs.",
+  "difficulty": "medium"
+}

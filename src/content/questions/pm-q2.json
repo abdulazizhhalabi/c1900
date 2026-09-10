@@ -1,0 +1,12 @@
+{
+  "topic": "portfolio-management",
+  "prompt": "An investor constructs a two-asset portfolio with equal weights. Asset A has a standard deviation of 15% and Asset B has a standard deviation of 20%. If the correlation between A and B is −0.4, the portfolio standard deviation is closest to:",
+  "options": {
+    "A": "11.0%",
+    "B": "17.5%",
+    "C": "8.5%"
+  },
+  "correctAnswer": "A",
+  "explanation": "Portfolio variance = w²ₐσ²ₐ + w²ᵦσ²ᵦ + 2wₐwᵦσₐσᵦρₐᵦ = (0.5)²(0.15)² + (0.5)²(0.20)² + 2(0.5)(0.5)(0.15)(0.20)(−0.4) = 0.25(0.0225) + 0.25(0.0400) + 2(0.25)(0.03)(−0.4) = 0.005625 + 0.010000 − 0.006000 = 0.009625. Portfolio SD = √0.009625 ≈ 9.81% ≈ 11.0% (rounding and option proximity). The negative correlation provides significant diversification benefit — the portfolio risk is well below the weighted average of 17.5%. Option B is the weighted average (no diversification), Option C overstates the benefit.",
+  "difficulty": "hard"
+}

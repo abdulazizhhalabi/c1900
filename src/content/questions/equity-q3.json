@@ -1,0 +1,12 @@
+{
+  "topic": "equity-investments",
+  "prompt": "A company has earnings per share of $4.00, pays out 50% as dividends, has a required return of 12%, and sustainable growth rate of 6%. The justified leading P/E ratio is closest to:",
+  "options": {
+    "A": "8.33",
+    "B": "4.17",
+    "C": "12.50"
+  },
+  "correctAnswer": "A",
+  "explanation": "The justified leading P/E = payout ratio / (r − g) = 0.50 / (0.12 − 0.06) = 0.50 / 0.06 = 8.33. This is derived from the Gordon Growth Model: P₀ = D₁/(r−g), and P₀/E₁ = (D₁/E₁)/(r−g) = payout ratio/(r−g). Option B (4.17) divides the payout ratio by r alone, ignoring growth: 0.50/0.12 = 4.17. Option C (12.50) uses 1/(r−g) without the payout adjustment: 1/0.08 = 12.50.",
+  "difficulty": "hard"
+}

@@ -1,0 +1,12 @@
+{
+  "topic": "alternative-investments",
+  "prompt": "A commercial property generates annual net operating income of $180,000. Similar properties in the area have recently sold at capitalization rates of 6%. The estimated value of the property using the income approach is:",
+  "options": {
+    "A": "$3,000,000",
+    "B": "$10,800,000",
+    "C": "$1,080,000"
+  },
+  "correctAnswer": "A",
+  "explanation": "Using the income capitalization approach: Value = NOI / Cap rate = $180,000 / 0.06 = $3,000,000. Option B ($10,800,000) results from multiplying NOI by the cap rate rather than dividing: $180,000 × 60 = $10,800,000. Option C ($1,080,000) appears to apply an incorrect multiplier. The capitalization rate compresses the income stream into a value: lower cap rates imply higher property values (like lower required yields on bonds), and vice versa.",
+  "difficulty": "easy"
+}

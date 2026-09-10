@@ -1,0 +1,12 @@
+{
+  "topic": "financial-statement-analysis",
+  "prompt": "A company reports net income of $200,000 and cash flow from operations (CFO) of $80,000. An analyst notes that accounts receivable increased by $90,000 and accounts payable decreased by $30,000 during the year. This pattern most likely indicates:",
+  "options": {
+    "A": "Strong earnings quality, as the company is efficiently collecting receivables.",
+    "B": "Potential earnings quality concern, as net income significantly exceeds CFO.",
+    "C": "Normal operations, as accruals always exceed cash flows in growing companies."
+  },
+  "correctAnswer": "B",
+  "explanation": "When net income significantly exceeds CFO — here by $120,000 — it signals that a large portion of reported earnings consists of accruals rather than cash. The increase in accounts receivable ($90,000) means revenue was recorded before cash was collected; the decrease in accounts payable ($30,000) means the company paid suppliers faster than it recognized expenses. Both reduce CFO relative to net income. High accruals relative to assets are a key warning sign in earnings quality analysis. Option A incorrectly treats rising receivables as a sign of efficient collection. Option C is overly broad and dismissive of a meaningful red flag.",
+  "difficulty": "hard"
+}

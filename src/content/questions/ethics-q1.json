@@ -1,0 +1,12 @@
+{
+  "topic": "ethical-professional-standards",
+  "prompt": "An analyst receives a case of premium wine from a corporate client shortly after publishing a favorable research report. Under the CFA Institute Standards of Professional Conduct, the analyst should most appropriately:",
+  "options": {
+    "A": "Accept the gift, as it was a token of appreciation for legitimate research work.",
+    "B": "Accept the gift only after disclosing it to the employer, provided it does not compromise future independence and objectivity.",
+    "C": "Decline the gift regardless of disclosure, since all gifts from clients are prohibited under the Standards."
+  },
+  "correctAnswer": "B",
+  "explanation": "Standard I(B) – Independence and Objectivity permits receipt of gifts from clients, provided the analyst discloses the benefit to their employer and the gift does not compromise — or appear to compromise — the analyst's independence. A blanket prohibition (C) is too restrictive; the Standards focus on disclosure and whether objectivity is impaired. Silent acceptance (A) violates the disclosure requirement.",
+  "difficulty": "medium"
+}

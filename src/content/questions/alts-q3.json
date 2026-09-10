@@ -1,0 +1,12 @@
+{
+  "topic": "alternative-investments",
+  "prompt": "In private equity, the 'J-curve effect' refers to:",
+  "options": {
+    "A": "The tendency of private equity returns to exceed public equity returns over the long run.",
+    "B": "The pattern of early negative returns followed by positive returns as investments mature.",
+    "C": "The relationship between leverage and returns in leveraged buyout transactions."
+  },
+  "correctAnswer": "B",
+  "explanation": "The J-curve describes the typical return profile of a private equity fund over its life. In early years, management fees are charged and capital is deployed into investments that have not yet created value — resulting in negative reported returns (the bottom of the J). As portfolio companies mature and are exited, returns become increasingly positive, forming the upward arc of the J. This pattern means IRR calculations early in a fund's life significantly understate expected long-run returns. Options A and C describe other aspects of private equity but do not define the J-curve.",
+  "difficulty": "medium"
+}

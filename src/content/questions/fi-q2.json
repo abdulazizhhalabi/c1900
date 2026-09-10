@@ -1,0 +1,12 @@
+{
+  "topic": "fixed-income",
+  "prompt": "Two bonds are identical in all respects except that Bond A is callable and Bond B is non-callable. Which of the following best describes their relationship?",
+  "options": {
+    "A": "Bond A has a higher yield and higher price than Bond B.",
+    "B": "Bond A has a higher yield and lower price than Bond B.",
+    "C": "Bond A has a lower yield and lower price than Bond B."
+  },
+  "correctAnswer": "B",
+  "explanation": "A callable bond gives the issuer the right to redeem it early, typically when interest rates fall. This option is valuable to the issuer and harmful to the bondholder — it caps upside price appreciation and creates reinvestment risk. To compensate investors for this embedded option, callable bonds must offer a higher yield than otherwise identical non-callable bonds. The higher yield directly implies a lower price. Price of callable bond = Price of non-callable bond − Value of call option. So Bond A has a lower price (option-adjusted spread is wider) and higher yield than Bond B.",
+  "difficulty": "medium"
+}

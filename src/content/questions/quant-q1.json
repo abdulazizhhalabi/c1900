@@ -1,0 +1,12 @@
+{
+  "topic": "quantitative-methods",
+  "prompt": "An investor deposits $5,000 today into an account earning 6% per year compounded monthly. The value of the account at the end of 4 years is closest to:",
+  "options": {
+    "A": "$6,352",
+    "B": "$6,341",
+    "C": "$6,299"
+  },
+  "correctAnswer": "A",
+  "explanation": "With monthly compounding, the periodic rate is 6%/12 = 0.5% and the number of periods is 4 × 12 = 48. FV = 5,000 × (1.005)^48 = 5,000 × 1.2705 ≈ $6,352. Option B uses annual compounding (1.06^4 × 5,000 ≈ $6,312 — close but not exact to the listed value). Option C uses simple interest ($5,000 × 1.24 = $6,200 region). Monthly compounding always produces a higher FV than annual compounding at the same nominal rate.",
+  "difficulty": "medium"
+}

@@ -1,0 +1,12 @@
+{
+  "topic": "economics",
+  "prompt": "A firm in a perfectly competitive industry is currently producing at a level where price equals $40, average total cost (ATC) equals $45, and average variable cost (AVC) equals $35. The firm should most likely:",
+  "options": {
+    "A": "Shut down immediately because it is losing money.",
+    "B": "Continue operating in the short run but exit the industry in the long run.",
+    "C": "Increase output until price equals ATC."
+  },
+  "correctAnswer": "B",
+  "explanation": "In the short run, a firm should operate as long as price (P) exceeds average variable cost (AVC), because doing so covers variable costs and contributes something toward fixed costs. Here P = $40 > AVC = $35, so shutting down would increase losses (the firm would still owe fixed costs of $10 per unit but receive nothing). However, since P = $40 < ATC = $45, the firm is losing money and will exit in the long run if prices do not improve. Option A is incorrect — short-run shutdown requires P < AVC. Option C is incorrect — output decisions in perfect competition follow P = MC, not P = ATC.",
+  "difficulty": "medium"
+}

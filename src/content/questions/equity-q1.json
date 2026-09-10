@@ -1,0 +1,12 @@
+{
+  "topic": "equity-investments",
+  "prompt": "A stock pays a dividend of $2.00 next year and dividends are expected to grow at 4% per year indefinitely. If the required rate of return is 10%, the stock's intrinsic value using the Gordon Growth Model is:",
+  "options": {
+    "A": "$33.33",
+    "B": "$50.00",
+    "C": "$20.00"
+  },
+  "correctAnswer": "A",
+  "explanation": "The Gordon Growth Model (constant growth DDM): P₀ = D₁ / (r − g) = $2.00 / (0.10 − 0.04) = $2.00 / 0.06 = $33.33. Option B uses D₀ incorrectly or uses a different denominator. Option C uses D₁ / r ignoring growth: $2.00 / 0.10 = $20.00, which treats the dividend as a perpetuity with no growth. Always use D₁ (next period's dividend) and subtract the growth rate from the required return in the denominator.",
+  "difficulty": "easy"
+}

@@ -1,0 +1,12 @@
+{
+  "topic": "derivatives",
+  "prompt": "Put-call parity states that for European options on a non-dividend-paying stock: C + PV(K) = P + S₀. If a call trades at $6, the stock is at $50, the present value of the strike is $47, and the put trades at $4, an arbitrageur would most likely:",
+  "options": {
+    "A": "Buy the call, sell the put, and sell the stock.",
+    "B": "Buy the put and the stock, and sell the call and a bond.",
+    "C": "Buy the call and a bond, and sell the put and the stock."
+  },
+  "correctAnswer": "C",
+  "explanation": "Check parity: Left side = C + PV(K) = $6 + $47 = $53. Right side = P + S₀ = $4 + $50 = $54. The right side is overpriced by $1. To arbitrage, sell what is expensive (sell P and S₀) and buy what is cheap (buy C and bond). This creates a riskless profit: proceeds from selling $54 portfolio, cost of buying $53 portfolio = $1 profit. Option A sells the put but also sells the call (wrong side). Option B buys the overpriced side.",
+  "difficulty": "hard"
+}

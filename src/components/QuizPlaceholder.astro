@@ -1,0 +1,66 @@
+---
+interface Props {
+  questionCount: number;
+  topicLabel: string;
+}
+
+const { questionCount, topicLabel } = Astro.props;
+---
+
+<div class="quiz-placeholder">
+  <div class="quiz-placeholder__icon" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <rect x="1" y="1" width="26" height="26" rx="4" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="14" cy="11" r="3" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M8 22c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <h3 class="quiz-placeholder__title">Practice Quiz</h3>
+  <p class="quiz-placeholder__body">
+    {questionCount} question{questionCount !== 1 ? 's' : ''} · {topicLabel}
+  </p>
+  <p class="quiz-placeholder__note">
+    Interactive quiz engine coming in the next phase.
+  </p>
+</div>
+
+<style>
+  .quiz-placeholder {
+    background: var(--color-surface-floating);
+    border: 1px dashed rgba(201, 151, 74, 0.25);
+    border-radius: 0.625rem;
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--color-text-secondary);
+  }
+
+  .quiz-placeholder__icon {
+    color: var(--color-brand-600);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quiz-placeholder__title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.02em;
+  }
+
+  .quiz-placeholder__body {
+    font-size: 0.875rem;
+    color: var(--color-brand-500);
+    font-weight: 500;
+    margin: 0 0 0.875rem;
+  }
+
+  .quiz-placeholder__note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    font-style: italic;
+  }
+</style>

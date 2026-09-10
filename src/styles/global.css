@@ -1,0 +1,359 @@
+@import "@fontsource-variable/cormorant-garamond";
+@import "@fontsource-variable/dm-sans";
+
+@import "tailwindcss";
+
+@theme {
+  /* Brand: amber gold derived from CFA charter gold */
+  --color-brand-50:  #fdf6ec;
+  --color-brand-100: #f8e9cc;
+  --color-brand-200: #f0cf96;
+  --color-brand-300: #e6b15b;
+  --color-brand-400: #da9530;
+  --color-brand-500: #c9974a;
+  --color-brand-600: #a97838;
+  --color-brand-700: #865d2b;
+  --color-brand-800: #62431f;
+  --color-brand-900: #3d2a12;
+
+  /* Surface z-plane system */
+  --color-surface-base:     #0d1117;
+  --color-surface-elevated: #161b27;
+  --color-surface-floating: #1d2433;
+
+  /* Text */
+  --color-text-primary:   #f0ebe1;
+  --color-text-secondary: #9b9189;
+  --color-text-muted:     #5a534d;
+
+  /* Functional */
+  --color-border-subtle:  rgba(201, 151, 74, 0.15);
+  --color-border-dim:     rgba(201, 151, 74, 0.08);
+
+  /* Semantic */
+  --color-correct:  #4ade80;
+  --color-wrong:    #f87171;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond Variable", Georgia, serif;
+  --font-sans:    "DM Sans Variable", system-ui, sans-serif;
+
+  /* Custom spacing tokens */
+  --spacing-18:  4.5rem;
+  --spacing-22:  5.5rem;
+  --spacing-88:  22rem;
+  --spacing-112: 28rem;
+
+  /* Shadows */
+  --shadow-card:  0 1px 2px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.35), 0 0 0 1px rgba(201,151,74,0.08);
+  --shadow-glow:  0 0 24px rgba(201,151,74,0.15), 0 0 0 1px rgba(201,151,74,0.2);
+  --shadow-inset: inset 0 1px 0 rgba(201,151,74,0.1);
+}
+
+/* Base layer */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-base);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(201, 151, 74, 0.25);
+  color: var(--color-text-primary);
+}
+
+/* Focus ring — use brand color */
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 151, 74, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 151, 74, 0.5);
+}
+
+/* SVG grain texture filter (used as bg overlay) */
+.grain-overlay {
+  position: relative;
+}
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Prose styles for study content */
+.prose-cfa {
+  line-height: 1.75;
+  color: var(--color-text-primary);
+  max-width: 76ch;
+}
+.prose-cfa h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-brand-400);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(201,151,74,0.15);
+  padding-bottom: 0.4rem;
+}
+.prose-cfa h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.prose-cfa p {
+  margin-bottom: 1.25rem;
+  color: var(--color-text-primary);
+  font-size: 1rem;
+}
+.prose-cfa ul, .prose-cfa ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-text-primary);
+}
+.prose-cfa li {
+  margin-bottom: 0.4rem;
+  line-height: 1.65;
+}
+.prose-cfa li::marker {
+  color: var(--color-brand-500);
+}
+.prose-cfa strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+.prose-cfa a {
+  color: var(--color-brand-400);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-cfa a:hover {
+  color: var(--color-brand-300);
+}
+.prose-cfa blockquote {
+  border-left: 3px solid var(--color-brand-500);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+.prose-cfa code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.875em;
+  background: var(--color-surface-floating);
+  border: 1px solid rgba(201,151,74,0.12);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  color: var(--color-brand-300);
+}
+
+/* ─── Responsive utilities ────────────────────────────── */
+
+@media (max-width: 640px) {
+  .quiz-card {
+    padding: 1.25rem;
+  }
+  .quiz-option-btn {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ─── Topic card (home grid) ──────────────────────────── */
+
+.topic-card {
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.topic-card:hover {
+  border-color: rgba(201, 151, 74, 0.35) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,151,74,0.15) !important;
+}
+.topic-card:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+.topic-card:active {
+  transform: translateY(0);
+}
+
+/* ─── Quiz Island ──────────────────────────────────────── */
+
+.quiz-card {
+  background: var(--color-surface-floating);
+  border: 1px solid rgba(201,151,74,0.12);
+  border-radius: 0.625rem;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+/* Option buttons */
+.quiz-option-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: var(--color-surface-elevated);
+  border: 1px solid rgba(201,151,74,0.1);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.1s ease;
+}
+.quiz-option-btn:hover:not(:disabled) {
+  border-color: rgba(201,151,74,0.3);
+  background: rgba(201,151,74,0.05);
+}
+.quiz-option-btn:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+.quiz-option-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.quiz-option-btn__letter {
+  flex-shrink: 0;
+  width: 1.625rem;
+  height: 1.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-floating);
+  border: 1px solid rgba(201,151,74,0.15);
+  border-radius: 0.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-brand-400);
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+/* Correct answer */
+.quiz-option-btn--correct {
+  border-color: rgba(74,222,128,0.35) !important;
+  background: rgba(74,222,128,0.06) !important;
+  color: #4ade80 !important;
+  cursor: default;
+}
+.quiz-option-btn--correct .quiz-option-btn__letter {
+  background: rgba(74,222,128,0.12);
+  border-color: rgba(74,222,128,0.3);
+  color: #4ade80;
+}
+
+/* Wrong selection */
+.quiz-option-btn--wrong {
+  border-color: rgba(248,113,113,0.35) !important;
+  background: rgba(248,113,113,0.06) !important;
+  color: #f87171 !important;
+  cursor: default;
+}
+.quiz-option-btn--wrong .quiz-option-btn__letter {
+  background: rgba(248,113,113,0.12);
+  border-color: rgba(248,113,113,0.3);
+  color: #f87171;
+}
+
+/* Dimmed (other options after answering) */
+.quiz-option-btn--dim {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* Primary action button */
+.quiz-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-brand-500);
+  border: 1px solid var(--color-brand-400);
+  border-radius: 0.5rem;
+  color: var(--color-surface-base);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.1s ease, box-shadow 0.12s ease;
+  box-shadow: 0 0 0 0 rgba(201,151,74,0);
+}
+.quiz-primary-btn:hover:not(:disabled) {
+  background: var(--color-brand-400);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(201,151,74,0.25);
+}
+.quiz-primary-btn:focus-visible {
+  outline: 2px solid var(--color-brand-300);
+  outline-offset: 3px;
+}
+.quiz-primary-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.quiz-primary-btn--disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: var(--color-surface-floating);
+  border-color: rgba(201,151,74,0.15);
+  color: var(--color-text-muted);
+  box-shadow: none;
+}
+.quiz-primary-btn--disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Outline variant (Retake) */
+.quiz-primary-btn--outline {
+  background: transparent;
+  border-color: rgba(201,151,74,0.3);
+  color: var(--color-brand-400);
+}
+.quiz-primary-btn--outline:hover:not(:disabled) {
+  background: rgba(201,151,74,0.08);
+  border-color: rgba(201,151,74,0.5);
+  color: var(--color-brand-300);
+}

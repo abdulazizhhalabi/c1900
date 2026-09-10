@@ -1,0 +1,12 @@
+{
+  "topic": "portfolio-management",
+  "prompt": "A stock has a beta of 0.8 and plots above the Security Market Line (SML). This most likely indicates that the stock is:",
+  "options": {
+    "A": "Overvalued, as its expected return exceeds the required return.",
+    "B": "Undervalued, as its expected return exceeds the required return.",
+    "C": "Fairly valued, since beta below 1 means the stock is defensive."
+  },
+  "correctAnswer": "B",
+  "explanation": "The SML represents required returns given systematic risk (beta). If a stock plots above the SML, its expected return (based on current price) is higher than its CAPM-required return for that level of risk. This means the stock is priced too low relative to its fundamentals — it is undervalued. Investors will bid up the price, driving the expected return down until the stock plots on the SML. Option A confuses over- and undervaluation. Option C is irrelevant — beta < 1 does not determine valuation relative to the SML.",
+  "difficulty": "medium"
+}

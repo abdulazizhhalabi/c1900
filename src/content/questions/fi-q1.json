@@ -1,0 +1,12 @@
+{
+  "topic": "fixed-income",
+  "prompt": "A 5-year bond has a modified duration of 4.2 and a convexity of 22. If yields rise by 50 basis points, the approximate percentage price change is closest to:",
+  "options": {
+    "A": "−2.10%",
+    "B": "−2.07%",
+    "C": "−2.13%"
+  },
+  "correctAnswer": "B",
+  "explanation": "Using the duration-convexity approximation: ΔP/P ≈ −D_mod × Δy + ½ × C × (Δy)². Δy = 0.005 (50 bps). Duration effect: −4.2 × 0.005 = −0.0210. Convexity adjustment: +½ × 22 × (0.005)² = +½ × 22 × 0.000025 = +0.000275. Total ≈ −0.0210 + 0.000275 = −0.020725 ≈ −2.07%. Option A ignores the convexity adjustment (−2.10%). Option C is slightly off. Convexity always partially offsets the duration effect (bonds benefit from convexity in both rising and falling rate environments).",
+  "difficulty": "hard"
+}

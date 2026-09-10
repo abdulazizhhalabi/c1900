@@ -1,0 +1,12 @@
+{
+  "topic": "ethical-professional-standards",
+  "prompt": "A CFA candidate tells a prospective employer that she has 'passed all three levels of the CFA exam and is a CFA charterholder.' She has, in fact, passed all three exams but has not yet fulfilled the work experience requirement and has not been awarded the charter. This statement:",
+  "options": {
+    "A": "Does not violate any Standard, since she has genuinely passed all three exams.",
+    "B": "Violates Standard VII(B) – Reference to the CFA Designation, because claiming to be a charterholder when the charter has not been awarded is a misrepresentation.",
+    "C": "Violates Standard I(C) – Misrepresentation only, not Standard VII(B)."
+  },
+  "correctAnswer": "B",
+  "explanation": "Standard VII(B) governs how candidates and members may reference the CFA designation. Claiming to be a 'CFA charterholder' before the charter is formally awarded — even if all exams are passed — is a misrepresentation prohibited by this Standard. The correct statement would be: 'I have passed all three levels of the CFA exam and am awaiting completion of the work experience requirement.' Standard I(C) may also be implicated, but the primary and most specific Standard is VII(B).",
+  "difficulty": "easy"
+}

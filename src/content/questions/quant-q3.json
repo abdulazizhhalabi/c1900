@@ -1,0 +1,12 @@
+{
+  "topic": "quantitative-methods",
+  "prompt": "A hypothesis test is conducted at the 5% significance level. The null hypothesis is rejected. Which of the following statements is most accurate?",
+  "options": {
+    "A": "There is a 5% probability that the null hypothesis is true.",
+    "B": "There is a 5% probability that the test result occurred by chance if the null hypothesis is true.",
+    "C": "There is a 95% probability that the alternative hypothesis is true."
+  },
+  "correctAnswer": "B",
+  "explanation": "The significance level α = 5% defines the Type I error rate — the probability of rejecting a true null hypothesis. Rejecting at α = 5% means there is only a 5% chance of observing this test statistic (or more extreme) if H₀ is actually true. Option A incorrectly interprets α as the posterior probability that H₀ is true (a Bayesian concept). Option C is also a common misinterpretation: 1 − α is not the probability that H₁ is true, but the confidence level of the test.",
+  "difficulty": "hard"
+}

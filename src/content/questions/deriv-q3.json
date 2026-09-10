@@ -1,0 +1,12 @@
+{
+  "topic": "derivatives",
+  "prompt": "A company with floating-rate debt wants to convert it to fixed-rate debt using an interest rate swap. The company should enter a swap where it:",
+  "options": {
+    "A": "Pays floating and receives fixed.",
+    "B": "Pays fixed and receives floating.",
+    "C": "Pays fixed and receives fixed at a different rate."
+  },
+  "correctAnswer": "B",
+  "explanation": "The company already pays floating on its existing debt. To convert this to a fixed-rate obligation synthetically, it should enter a swap where it pays fixed and receives floating. The floating received from the swap offsets the floating paid on the debt, leaving a net fixed-rate obligation. Option A (pays floating, receives fixed) would double the floating exposure, not offset it. Option C involves no rate transformation and has no economic purpose. This is the most common interest rate swap application tested on the CFA exam.",
+  "difficulty": "medium"
+}

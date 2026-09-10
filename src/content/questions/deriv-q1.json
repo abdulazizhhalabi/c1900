@@ -1,0 +1,12 @@
+{
+  "topic": "derivatives",
+  "prompt": "An investor buys a call option on a stock with a strike price of $50, paying a premium of $4. At expiration the stock trades at $57. The investor's net profit per share is:",
+  "options": {
+    "A": "$7",
+    "B": "$3",
+    "C": "$11"
+  },
+  "correctAnswer": "B",
+  "explanation": "The payoff of a long call at expiration = max(ST − K, 0) = max(57 − 50, 0) = $7. Net profit = Payoff − Premium paid = $7 − $4 = $3. Option A ($7) is the gross payoff, ignoring the premium cost. Option C ($11) incorrectly adds the premium to the payoff. The breakeven stock price for the long call = Strike + Premium = $50 + $4 = $54. Since $57 > $54, the position is profitable.",
+  "difficulty": "easy"
+}

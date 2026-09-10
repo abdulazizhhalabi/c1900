@@ -1,0 +1,12 @@
+{
+  "topic": "economics",
+  "prompt": "According to purchasing power parity (PPP), if inflation in Country A is 6% and inflation in Country B is 2%, the currency of Country A should:",
+  "options": {
+    "A": "Appreciate by approximately 4% relative to Country B's currency.",
+    "B": "Depreciate by approximately 4% relative to Country B's currency.",
+    "C": "Remain unchanged, since PPP applies only to traded goods."
+  },
+  "correctAnswer": "B",
+  "explanation": "Purchasing power parity predicts that high-inflation currencies depreciate relative to low-inflation currencies by approximately the inflation differential. Here the differential is 6% − 2% = 4%, so Country A's currency should depreciate by ~4%. This preserves the real exchange rate: goods in both countries cost the same in a common currency. Option A gets the direction wrong. Option C is incorrect — while PPP is more applicable to traded goods, the statement is too absolute and PPP (especially in its relative form) is tested as a standard relationship on the CFA exam.",
+  "difficulty": "easy"
+}
